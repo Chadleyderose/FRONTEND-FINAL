@@ -1,0 +1,226 @@
+/* --- Generic Styles --- */
+
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-flexbox;
+      display: -webkit-flex;
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+  }
+  
+  h1 {
+      color: #fff;
+      margin: 0px;
+      padding: 0px;
+  }
+  
+  .header {
+      width: 100%;
+      background-color: #000;
+  }
+  
+  .container {
+      margin: 10px auto;
+      max-width: 1200px;
+      padding: 10px;
+  }
+  
+  /* --- Hamburger Functionality --- */
+  
+  div.menu-link {
+      padding: 1em;
+      color: #fff;
+  }
+  
+  /* When screen is small, center content and animate transitions. */
+  nav[role=navigation] {
+      clear: both;
+      overflow: hidden;
+      max-height: 0;
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -ms-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+      width: 100%;
+      margin: 0px 0px 0px -50px;
+  }
+  
+  /* Positioning when nav does appear in small screen mode */
+  nav[role=navigation].open {
+      max-height: 15em;
+      margin-bottom: 10px;
+      margin-top: 50px;
+  }
+  
+  /* When in small screen, center the list */
+  nav[role=navigation] ul {
+      margin: 0 auto;
+      padding: 0;
+  }
+  
+  nav[role=navigation] li a {
+      display: block;
+      padding: 0.8em;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+  }
+  
+  /* Style for larger screens. Hide the menu button, and show the normal navigation menu. */
+  /* Credit: https://codepen.io/bradfrost/pen/sHvaz */
+  @media screen and (min-width: 35em) {
+      div.menu-link {
+          display: none;
+      }
+  
+      nav[role=navigation] {
+          max-height: none;
+          margin: 0px;
+      }
+  
+      nav[role=navigation] ul {
+          margin: 0 0 0 -0.25em;
+          border: 0;
+          text-align: right;
+      }
+  
+      nav[role=navigation] li {
+          display: inline-block;
+          margin: 0 0.25em;
+      }
+  
+      nav[role=navigation] li a {
+          border: 0;
+      }
+  }
+  header h1 {
+    color: rgb(255, 255, 255);
+    
+}
+header h1 span{
+    color: #f37e24;
+}
+img{
+    height: 165px;
+    width: 165px;
+}
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+.form
+{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.form-box
+{
+    width: 380px;
+    height: 490px;
+    position: relative;
+    margin: 5% auto;
+    background: white;
+    padding: 5px;
+    border: 2.25px solid #f8a358;
+    overflow: hidden;
+}
+
+.fobtn-box
+{
+    width: 220px;
+    margin: 35px auto;
+    position: relative;
+    box-shadow: 0 0 20px 10px  #f37e24;
+    border-radius: 25px;
+}
+
+.toggle-btn
+{
+    padding: 10px 30px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#btn
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 110px;
+    height: 100%;
+    background: linear-gradient(to right, #f37e24, #f8a358);
+    border-radius: 30px;
+    transition: 1.4s;
+}
+
+.input-group
+{
+    top: 180px;
+    position: absolute;
+    width: 280px;
+    transition: 1.4s;
+}
+
+.datainput
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 5px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.submit
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+    background: linear-gradient(to right, #f37e24, #f8a358);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.check
+{
+    margin: 30px 10px 30px 0;
+}
+
+form span
+{
+    color: #777;
+    font-size: 13px;
+    bottom: 70px;
+    position: absolute;
+}
+
+#login
+{
+    left: 50px;
+}
+
+#register
+{
+    left: 450px;
+}
