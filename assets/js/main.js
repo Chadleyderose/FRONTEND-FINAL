@@ -53,16 +53,21 @@ var x = document.getElementById("login");
         }
 
 
+function 
+
 fetch('http://127.0.0.1:5000/users/')
 .then(res => res.json())
 .then(data => {
     console.log(data);
 })
+
+
 fetch('http://127.0.0.1:5000/items/')
 .then(res => res.json())
 .then(data => {
     console.log(data);
 })
+
 fetch('http://127.0.0.1:5000/item-qty/')
 .then(res => res.json())
 .then(data => {
