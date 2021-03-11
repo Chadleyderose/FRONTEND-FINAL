@@ -37,13 +37,11 @@
             </div>
            
             <form id="login" class="input-group" action="http://127.0.0.1:5000/users " method="POST">
-                <input type="id" class="datainput" placeholder="Username" required>
+                <input type="Username" class="datainput" placeholder="Username" required>
                 <input type="password" class="datainput" placeholder="Password" required>
-                <input type="checkbox" class="check">
-                <span>Remember me</span>
-                <button type="submit" class="submit"><a href="display.html">Log in</a></button>
+                <button type="submit" class="submit">Log in</button>
             </form>
-            <form id="register" class="input-group" action="http://127.0.0.1:5000/users "method="POST">
+            <form id="register" class="input-group" action="http://127.0.0.1:5000/users "method="POST", onsubmit="event.preventDefault(); createUsers();" id="reg-form">
                 <input type="text" class="datainput" placeholder="Username" required>
                 <input type="password" class="datainput" placeholder="Password" required>
                 <button type="submit" class="submit">Register</button>

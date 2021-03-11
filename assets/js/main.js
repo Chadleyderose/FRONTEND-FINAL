@@ -53,7 +53,25 @@ var x = document.getElementById("login");
         }
 
 
-function 
+function createUsers(){
+    const inputs = document.getElementsByTagName("input");
+    fetch("http://127.0.0.1:5000/add-user/",{
+        method: 'POST',
+        body: JSON.stringify({
+            Username: inputs[0].value,
+            password: inputs[1].value,
+            Username: inputs[2].value,
+            password: inputs[3].value,
+
+        })
+    })
+    .then((response) => response.json())
+    .then((json) => {
+      alert("User has been created");
+      document.getElementById("reg-form").reset();
+      window.location.href="./index.html";
+    });
+}
 
 fetch('http://127.0.0.1:5000/users/')
 .then(res => res.json())
