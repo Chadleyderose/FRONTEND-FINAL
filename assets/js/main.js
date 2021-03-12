@@ -52,42 +52,49 @@ var x = document.getElementById("login");
             z.style.left = "0px";
         }
 
+//js for backend
 
-function createUsers(){
-    const inputs = document.getElementsByTagName("input");
-    fetch("http://127.0.0.1:5000/add-user/",{
-        method: 'POST',
-        body: JSON.stringify({
-            Username: inputs[0].value,
-            password: inputs[1].value,
-            Username: inputs[2].value,
-            password: inputs[3].value,
-
-        })
+function createUsers();
+    let form = document.getElementById("register");
+    const inputs = form.getElementsByTagName("input");
+    
+    fetch("https://whispering-savannah-30451.herokuapp.com/new-user/",{
+      method: "POST",
+      body: JSON.stringify({
+        Username: inputs[0].value,
+        Password: inputs[1].value,
+        // Username: inputs[2].value,
+        // password: inputs[3].value,
+      }),
+      headers: {
+        "Content-type":"application/json; chartset=UTF-8",
+      },
     })
-    .then((response) => response.json())
-    .then((json) => {
-      alert("User has been created");
-      document.getElementById("reg-form").reset();
-      window.location.href="./index.html";
+      .then((response) => response.json())
+      .then((json) => {
+        alert("User has been created");
+        console.log(json);
+        form.reset();
+        // window.location.href="index.html";
     });
-}
+    
 
-fetch('http://127.0.0.1:5000/users/')
-.then(res => res.json())
-.then(data => {
-    console.log(data);
-})
+// fetch('https://whispering-savannah-30451.herokuapp.com//users/')
+// .then(res => res.json())
+// .then(data => {
+//     console.log(data);
+// })
 
 
-fetch('http://127.0.0.1:5000/items/')
-.then(res => res.json())
-.then(data => {
-    console.log(data);
-})
+// fetch('https://whispering-savannah-30451.herokuapp.com/items/')
+// .then(res => res.json())
+// .then(data => {
+//     console.log(data);
+// })
 
-fetch('http://127.0.0.1:5000/item-qty/')
-.then(res => res.json())
-.then(data => {
-    console.log(data);
-})
+// fetch('https://whispering-savannah-30451.herokuapp.com/item-qty/')
+// .then(res => res.json())
+// .then(data => {
+//     console.log(data);
+// });
+
