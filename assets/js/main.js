@@ -27,7 +27,7 @@ $(document).ready(function(){
         .staggerTo([tableLoder,wrapper],2,{opacity:0, zIndex: -1},0.2);
     })
     $('body').append(' <div id="wrapper"><div id="preloader"><div id="preloader2"><div id="preloader3"></div></div></div><div id="annonce">Unexpected Opportunities</div></div>');
-$(window).ready('load', function(){
+  $(window).ready('load', function(){
   setTimeout(removeLoader, 2000); //wait for page load PLUS two seconds.
 });
 function removeLoader(){
@@ -36,6 +36,7 @@ function removeLoader(){
       $( "#wrapperdiv" ).remove(); //makes page more lightweight 
   });  
 }
+//Login & Register functions
 var x = document.getElementById("login");  
         var y = document.getElementById("register");  
         var z = document.getElementById("btn");
@@ -52,31 +53,31 @@ var x = document.getElementById("login");
             z.style.left = "0px";
         }
 
-//js for backend
+// //js for backend
 
-function createUsers();
-    let form = document.getElementById("register");
-    const inputs = form.getElementsByTagName("input");
+// function createUsers()
+//     let form = document.getElementById("register");
+//     const inputs = form.getElementsByTagName("input");
     
-    fetch("https://whispering-savannah-30451.herokuapp.com/new-user/",{
-      method: "POST",
-      body: JSON.stringify({
-        Username: inputs[0].value,
-        Password: inputs[1].value,
-        // Username: inputs[2].value,
-        // password: inputs[3].value,
-      }),
-      headers: {
-        "Content-type":"application/json; chartset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        alert("User has been created");
-        console.log(json);
-        form.reset();
-        // window.location.href="index.html";
-    });
+//     fetch("https://whispering-savannah-30451.herokuapp.com/new-user/",{
+//       method: "POST",
+//       body: JSON.stringify({
+//         Username: inputs[0].value,
+//         Password: inputs[1].value,
+//         Username: inputs[2].value,
+//         password: inputs[3].value,
+//       }),
+//       headers: {
+//         "Content-type":"application/json; chartset=UTF-8",
+//       },
+//     })
+//       .then((response) => response.json())
+//       .then((json) => {
+//         alert("User has been created");
+//         console.log(json);
+//         form.reset();
+//         window.location.href="index.html";
+//     });
     
 
 // fetch('https://whispering-savannah-30451.herokuapp.com//users/')
