@@ -56,34 +56,34 @@ var x = document.getElementById("login");
 
 // js for backend
 
-function createUsers()
-    let form = document.getElementById("register");
-    const inputs = form.getElementsByTagName("input");
+// function createUsers()
+//     let form = document.getElementById("register");
+//     const inputs = form.getElementsByTagName("input");
   
-    fetch("https://whispering-savannah-30451.herokuapp.com/new-user/",{
-      method: "POST",
-      body: JSON.stringify({
-        Username: inputs[0].value,
-        Password: inputs[1].value,
-        Username: inputs[3].value,
-        password: inputs[4].value,
-      }),
-      headers: {
-        "Content-type":"application/json; chartset=UTF-8",
-      },
-    })
-      .then((response) => response.json())
-      .then((json) => {
-        alert("User has been created");
-        console.log(json);
-        form.reset();
-        window.location.href=" display.html";
-    });
+//     fetch("https://whispering-savannah-30451.herokuapp.com/new-user/",{
+//       method: "POST",
+//       body: JSON.stringify({
+//         Username: inputs[0].value,
+//         Password: inputs[1].value,
+//         Username: inputs[3].value,
+//         password: inputs[4].value,
+//       }),
+//       headers: {
+//         "Content-type":"application/json; chartset=UTF-8",
+//       },
+//     })
+//       .then((response) => response.json())
+//       .then((json) => {
+//         alert("User has been created");
+//         console.log(json);
+//         form.reset();
+//         window.location.href=" display.html";
+//     });
   
 
-  fetch('https://whispering-savannah-30451.herokuapp.com//users/')
-  .then((res) => res.json())
-  .then(data => {
-      console.log(data);
-});
+//   fetch('https://whispering-savannah-30451.herokuapp.com//users/')
+//   .then((res) => res.json())
+//   .then(data => {
+//       console.log(data);
+// });
 
