@@ -1,0 +1,25 @@
+body{
+    background-color: #000;
+}
+
+th {
+    border: solid 1px white;
+    color: white;
+    font-size: 22px;
+}
+td {
+    border: solid 1px white;
+    color: white;
+}
+.container {
+    border: solid 1px white;
+}
+table {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+h1{
+    text-align: center;
+    color: orange;
+}
