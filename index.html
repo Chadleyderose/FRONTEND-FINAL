@@ -36,20 +36,21 @@
                 <button type="button" class="toggle-btn" onclick="register()">Register</button>
             </div>
            
-            <form id="login" class="input-group">
-                <input type="id" class="datainput" placeholder="Username" required>
-                <input type="password" class="datainput" placeholder="Password" required>
+            <form id="login" class="input-group" onsubmit="event.preventDefault(); loginMain()">
+                <input type="id" class="datainput" placeholder="Username" name="Username" required>
+                <input type="password" class="datainput" placeholder="Password" name="Password" required>
                 <input type="checkbox" class="check">
                 <span>Remember me</span>
-                <button class="submit"><a href="display.html">Log in</a></button>
+                <button type="submit" class="submit">Log in</button>
             </form>
-            <form id="register" id="create" class="input-group">
-                <input type="text" class="datainput" placeholder="Username" required>
-                <input type="password" class="datainput" placeholder="Password" required>
+            <form id="register" id="create" class="input-group" onsubmit="event.preventDefault(); createUsers()">
+                <input type="text" class="datainput" placeholder="Username" name="Username" required>
+                <input type="password" class="datainput" placeholder="Password" name="Password" required>
                 <button type="submit" class="submit">Register</button>
             </form>
         </div>
     </div>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/fetch.js"></script>
     </body>
 </html>
