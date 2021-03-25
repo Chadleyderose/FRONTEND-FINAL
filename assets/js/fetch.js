@@ -1,7 +1,7 @@
 function createUsers(){
     const inputs = document.getElementsByTagName("input");
   
-    fetch("http://127.0.0.1:5000/new_user/",{
+    fetch("https://whispering-savannah-30451.herokuapp.com/new_user/",{
         method: 'POST',
         body: JSON.stringify({
             username: inputs[3].value,
@@ -24,7 +24,7 @@ function createUsers(){
 
 let Users = [];
 
-fetch("http://127.0.0.1:5000/users/")
+fetch("https://whispering-savannah-30451.herokuapp.com/users/")
     .then((response) =>response.json())
     .then((data) => {
     console.log(data);
